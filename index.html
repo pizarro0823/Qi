@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@ionic/core/css/ionic.bundle.css" />
+</head>
+
+<body>
+
+  <ion-app>
+      <ion-header>
+          <ion-toolbar color="danger">
+              <ion-buttons slot="start">
+                  <ion-button>
+                    <ion-icon name ="arrow-undo-outline"></ion-icon>
+                  </ion-button>
+              </ion-buttons>
+              <ion-title>7-44</ion-title>
+          </ion-toolbar>
+      </ion-header>
+
+      <ion-content>
+          <ion-grid>
+              <ion-row>
+                <ion-col>
+                    <ion-card>
+                        <ion-card-header>
+                        <ion-car-title>
+                            Costo ventanas 7-44
+                        </ion-car-title>
+                        </ion-card-header>
+                        <ion-card-content>
+                            <ion-item class="ion-margin-vertical"> 
+                                 <ion-label position="floating">Base :</ion-label>
+                                 <ion-input type="number" id="id_base"></ion-input>
+                            </ion-item>
+
+                             <ion-item>
+                                <ion-label position="floating">Altura :</ion-label>
+                                <ion-input type="number" id="id_altura"></ion-input>
+                            </ion-item>
+                           
+                            <ion-item>
+                                <ion-label>Naves</ion-label>
+                                <ion-select placeholder="Select One" id="id_naves">
+                                <ion-select-option value="2">2</ion-select-option>
+                                <ion-select-option value="3">3</ion-select-option>
+                                <ion-select-option value="4">4</ion-select-option>
+                                </ion-select>
+                            </ion-item>
+                            
+                            <ion-button class="ion-margin-vertical" id="id_btn_calcular""> 
+                                <ion-icon name="calculator-outline" slot="start"></ion-icon> Calcular</ion-button>
+
+                            <ion-button class="ion-margin-vertical" color="danger" id="id_btn_limpiar"> 
+                                <ion-icon name="trash" slot="start" ></ion-icon> Limpiar
+                        </ion-card-content>
+                        
+                    </ion-card>
+                </ion-col>
+              </ion-row>
+              <ion-row>
+                  <ion-col>
+                    <ion-list id="produc_list">
+
+                    </ion-list>
+                  </ion-col>
+              </ion-row>
+          </ion-grid>
+      </ion-content>
+  </ion-app>  
+
+
+    <script type="module" src="https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/ionic.esm.js"></script>
+    <script nomodule src="https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/ionic.js"></script>
+    <!-- LOGIC -->
+    <script src="./7_44.js"></script>
+    <script src="./Inv/inv.js"></script>
+</body>
+
+</html>
