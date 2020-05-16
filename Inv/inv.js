@@ -1,14 +1,77 @@
 
 
     list_inventary = [{
-        cabezal_744: 38000,
-        sillar_744: 45000,
-        jamba_744:39200,
-        traslapes_744:39700,
-        enganche_744: 42000,
-        socalo_inferior_744:37300,
-        socalo_superior_744:27000
+        
+        Aluminio_White:[
+
+            38000,// 0--cabezal_744:
+            45000,// 1--sillar_744:
+            39200,// 2--jamba_744:
+            39700,// 3--traslapes_744:
+            42000,// 4--enganche_744:
+            37300,// 5--socalo_inferior_744:
+            27000,// 6--socalo_superior_744:
+        ],
+        Aluminio_Natural:[
+
+            38000,// 0--cabezal_744:
+            45000,// 1--sillar_744:
+            39200,// 2--jamba_744:
+            39700,// 3--traslapes_744:
+            42000,// 4--enganche_744:
+            37300,// 5--socalo_inferior_744:
+            27000,// 6--socalo_superior_744:
+        ],
+        Aluminio_Anolok:[
+
+            38000,// 0--cabezal_744:
+            45000,// 1--sillar_744:
+            39200,// 2--jamba_744:
+            39700,// 3--traslapes_744:
+            42000,// 4--enganche_744:
+            37300,// 5--socalo_inferior_744:
+            27000,// 6--socalo_superior_744:
+        ],
+        Aluminio_Black:[
+
+            52000,// 0--cabezal_744:
+            45000,// 1--sillar_744:
+            49000,// 2--jamba_744:
+            39700,// 3--traslapes_744:
+            42000,// 4--enganche_744:
+            50000,// 5--socalo_inferior_744:
+            38000,// 6--socalo_superior_744:
+        ],
+        Glass:[
+
+            20000,// 0--vidrio_3mm:
+            25000,// 1--vidrio_4mm:
+            32000,// 2--vidrio_5mm:
+            40000,// 3--vidrio_6mm:
+            60000,// 4--vidrio_8mm:
+            25000,// 5--vidrio_espejo:
+            30000,// 6--vidrio_azul_bronce__espejo:_grabados
+
+        ],
+
+        Accesorios:[
+
+            100,  // 0--Guias:
+            9000, // 1--chapa_ventana:
+            50,   // 2--tornillos:
+            1000, // 3--empaque:
+            2500  // 4 rodamientos_744
+
+        ]
     },
+
+   
+
+   
+
+
+
+    
     ];
     
 
