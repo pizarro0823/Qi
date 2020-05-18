@@ -3,19 +3,7 @@
         {
           'url': 'https://pizarro0823.github.io/Qi/ventana_744/index.html',
           'title': 'Ventanas 7_44',
-        },
-        {
-          'url': 'https://www.facebook.com/',
-          'title': 'Ventanas 50_20',
-        },
-        {
-          'url': 'https://www.facebook.com/',
-          'title': 'Ventanas 80_25',
-          },
-          {
-            'url': 'https://www.facebook.com/',
-            'title': 'Ventanas Monumental',
-            },
+        }
 ]   
 
 
