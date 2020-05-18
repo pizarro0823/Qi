@@ -2,10 +2,10 @@
 const base = document.querySelector("#id_base");
 const altura = document.querySelector("#id_altura");
 const btn_calcular = document.querySelector("#id_btn_calcular");
-const comboBox = document.querySelector('#id_naves');
+const comboBox = document.querySelector('#Tipo_divicion');
 const btn_limpiar = document.querySelector('#id_btn_limpiar');
 const list = document.querySelector("#produc_list");
-const comboBox_vidrio = document.querySelector('#id_vidrios');
+const comboBox_forma = document.querySelector('#idforma');
 const clor_alum = document.querySelector('#id_color_alu')
 
 
@@ -53,7 +53,7 @@ btn_calcular.addEventListener('click', () => {
   const ba = base.value.replace(",",".");
   const al = altura.value.replace(",",".");
   const naves = comboBox.value;
-  const vidrios = comboBox_vidrio.value;
+  const forma = comboBox_forma.value;
   const color_alumnio_=clor_alum.value;
 
 

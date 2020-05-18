@@ -13,7 +13,7 @@
 
   <ion-app>
       <ion-header>
-          <ion-toolbar color="danger">
+          <ion-toolbar color="primary">
               <ion-buttons slot="start">
                   <ion-button href="https://pizarro0823.github.io/Qi/directory/index.html">
                     <ion-icon name ="arrow-undo-outline"></ion-icon>
@@ -30,7 +30,7 @@
                     <ion-card>
                         <ion-card-header>
                         <ion-car-title>
-                            Costo ventanas 7-44
+                            Diviones Baño
                         </ion-car-title>
                         </ion-card-header>
                         <ion-card-content>
@@ -46,19 +46,17 @@
                            
                             <ion-item>
                                 <ion-label>Naves</ion-label>
-                                <ion-select placeholder="Select One" id="id_naves">
-                                <ion-select-option value="2">2</ion-select-option>
-                                <ion-select-option value="3">3</ion-select-option>
-                                <ion-select-option value="4">4</ion-select-option>
+                                <ion-select placeholder="Select One" id="idTipo_divicion">
+                                <ion-select-option value="1">Acrilico</ion-select-option>
+                                <ion-select-option value="2">Glassvit</ion-select-option>
                                 </ion-select>
                             </ion-item>
 
                             <ion-item>
-                                <ion-label>Tipo Vidrio</ion-label>
-                                <ion-select placeholder="Select One" id="id_vidrios">
-                                <ion-select-option value="1">Claro_4mm</ion-select-option>
-                                <ion-select-option value="6">Grabado</ion-select-option>
-                                <ion-select-option value="6">Vidrio_espejo</ion-select-option>
+                                <ion-label>Forma</ion-label>
+                                <ion-select placeholder="Select One" id="idforma">
+                                <ion-select-option value="1">2_naves</ion-select-option>
+                                <ion-select-option value="6">L</ion-select-option>
                                 </ion-select>
                             </ion-item>
 
@@ -67,7 +65,6 @@
                                 <ion-select placeholder="Select One" id="id_color_alu">
                                 <ion-select-option value="Aluminio_White">Blanco</ion-select-option>
                                 <ion-select-option value="Aluminio_Natural">Natural</ion-select-option>
-                                <ion-select-option value="Aluminio_Black">Negro</ion-select-option>
                                 <ion-select-option value="Aluminio_Anolok">Anolock</ion-select-option>
                                 </ion-select>
                             </ion-item>
@@ -97,7 +94,7 @@
     <script type="module" src="https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/ionic.esm.js"></script>
     <script nomodule src="https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/ionic.js"></script>
     <!-- LOGIC -->
-    <script src="7_44.js"></script>
+    <script src="divicion_baño.js"></script>
     <script src="../Inv/inv.js"></script>
 </body>
 

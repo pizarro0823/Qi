@@ -1,87 +1,64 @@
 
-const widwet = document.querySelector('#lista_1')
+    techs = [
+        {
+          'url': 'https://pizarro0823.github.io/Qi/ventana_744/index.html',
+          'title': 'Ventanas 7_44',
+        },
+        {
+          'url': 'https://www.facebook.com/',
+          'title': 'Ventanas 50_20',
+        },
+        {
+          'url': 'https://www.facebook.com/',
+          'title': 'Ventanas 80_25',
+          },
+          {
+            'url': 'https://www.facebook.com/',
+            'title': 'Ventanas Monumental',
+            },
+]   
 
-techs = [
-    {
-        'title': 'Ventaneria',
-        'icon': 'angular',
-        'color': '#E63135',
-    },
-    {
-        'title': 'Diviciones de Baño',
-        'icon': 'css3',
-        'color': '#0CA9EA'
-    },
-    {
-        'title': 'Puertas',
-        'icon': 'html5',
-        'color': '#F46529'
-    },
 
-];
 
-customElements.define('nav-home', class NavHome extends HTMLElement {
-    connectedCallback() {
-        this.innerHTML = `
-                      <ion-header translucent>
-                        <ion-toolbar>
-                          <ion-title>Seleccione</ion-title>
-                        </ion-toolbar>
-                      </ion-header>
-                      <ion-content fullscreen>
-                        <ion-list>
-                        ${techs.map(tech => `
-                            <ion-item button onclick="showDetail('${tech.title}')">
-                              <ion-icon slot="start" name="logo-${tech.icon}" style="color: ${tech.color};"></ion-icon>
-                              <ion-label>
-                                <h3>${tech.title}</h3>
-                              </ion-label>
-                            </ion-item>
-                        `).join('\n')}
-                        </ion-list>
-                      </ion-content>
-                    `;
+let currentPopover = null;
+
+    const buttons = document.querySelectorAll('ion-button');
+    for (var i = 0; i < buttons.length; i++) {
+      buttons[i].addEventListener('click', handleButtonClick);
     }
-});
 
-const nav = document.querySelector('ion-nav');
+    async function handleButtonClick(ev) {
+      popover = await popoverController.create({
+        component: 'popover-example-page',
+        event: ev,
+        translucent: true
+      });
+      currentPopover = popover;
+      return popover.present();
+    }
 
-function showDetail(title) {
-    const tech = techs.find(tech => tech.title === title);
-    nav.push('nav-detail', { tech });
-}
+    function dismissPopover() {
+      if (currentPopover) {
+        currentPopover.dismiss().then(() => { currentPopover = null; });
+      }
+    }
 
-
-
-
-
-customElements.define('nav-detail', class NavDetail extends HTMLElement {
-    connectedCallback() {
+    customElements.define('popover-example-page', class ModalContent extends HTMLElement {
+      connectedCallback() {
         this.innerHTML = `
-                    <ion-header translucent>
-                        <ion-toolbar>
-                            <ion-buttons slot="start">
-                                <ion-back-button defaultHref="/"></ion-back-button>
-                            </ion-buttons>
-                            <ion-title>${this.tech.title}</ion-title>
-                        </ion-toolbar>
-                    </ion-header translucent>
-                    <ion-grid>
-                        <ion-row> 
-                        <ion-col size-md="4" offset-md="4">
-                        <ion-row>
-                        <ion-col size-md="4" offset-md="4">
-                          <ion-list id="lista_1">
+        ${techs.map(tech => `
       
-                          </ion-list>
-                        </ion-col>
-                    </ion-row>                        
-                        </ion-col>
-                        </ion-row>
-                    </ion-grid>
-                      
-                    `;
-    }
-   
-}
-);
+            <ion-list >
+            <ion-item button href="${tech.url}">${tech.title}</ion-item>
+            </ion-list>
+            
+          `).join('\n')}
+        `;
+        
+       
+
+      }
+    });
+
+
+
