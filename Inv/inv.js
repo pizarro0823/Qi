@@ -91,7 +91,7 @@
             1000, // 3--empaque_7:
             2500, // 4 rodamientos_744
             1000, // 5--empaque_213:
-             100  // 6--rodamientos_213:
+            1500  // 6--rodamientos_213:
 
         ],
         acrilico:[
