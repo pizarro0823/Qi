@@ -96,7 +96,7 @@
         ],
         acrilico:[
 
-            36500      // 0--Acrilico
+            40000      // 0--Acrilico
         ]
     },
 
