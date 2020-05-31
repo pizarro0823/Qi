@@ -7,7 +7,7 @@ const btn_limpiar = document.querySelector('#id_btn_limpiar');
 const list = document.querySelector("#produc_list");
 const comboBox_vidrio = document.querySelector('#id_vidrios');
 const clor_alum = document.querySelector('#id_color_alu')
-var ionCard;
+
 
 
 
@@ -16,14 +16,47 @@ var ionCard;
 
 const createNewProduc = (base, altura ,col , precio_costo,precio_venta) => {
 
-  ionCard = document.createElement('ion-card');
+  const ionCard = document.createElement('ion-card');
   const ionCardContenc = document.createElement('ion-card-content');
+  const ionItem = document.createElement('ion-item');
+  const ionIconClose = document.createElement('ion-icon');
+   const ionButtonClose = document.createElement('ion-button');
+  
+
+  
+  ionButtonClose.slot="end";
+  ionButtonClose.color="tertiary";
+
+  ionItem.color="tertiary";
+
+
+  ionIconClose.name ="close-circle-outline";
+  
+  
+  
+  
   ionCardContenc.textContent = 'Base: '+base + ' x ' +'Altura: '+ altura  
                               + ' Color: '+col+ '=>  $ '+ precio_costo +'<--->' + precio_venta;
+
+      
+                         
+   ionButtonClose.appendChild(ionIconClose)  
+
+   
+   ionItem.appendChild(ionButtonClose)      
+   ionCard.appendChild(ionItem)                     
+                              
   ionCard.appendChild(ionCardContenc);  
   list.appendChild(ionCard);
 
-  
+
+  ionButtonClose.addEventListener('click',()=>
+  {
+    
+    ionCard.remove();
+
+  })
+ 
 
 };
 
@@ -42,7 +75,7 @@ const presentAlert = () => {
   return alert.present();
 };
 
-const isEmpty = str => !str.trim().length;
+//const isEmpty = str => !str.trim().length;
 
 
 
@@ -87,10 +120,7 @@ const suma_valores_costo = Math.floor( mtr_cabezal_744+mtr_sillar_744+mtr_jamba_
 
 const precio_venta = Math.floor(suma_valores_costo * 1.60);
 
-  if (isEmpty(ba) || isEmpty(al) || isEmpty(naves) ||isEmpty(vidrios)) {
-    presentAlert();
-    return;
-  }
+ 
 
  
   createNewProduc(ba,al,color_alumnio_, suma_valores_costo,precio_venta)
