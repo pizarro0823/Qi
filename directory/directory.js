@@ -1,19 +1,19 @@
 
     techs = [
         {
-          'url': 'https://pizarro0823.github.io/Qi/ventana_744/index.html',
+          'url': 'https://pizarro0823.github.io/Qi/ventanas/ventana_744/index.html',
           'title': 'Ventanas 7_44',
         },
         {
-          'url': 'https://pizarro0823.github.io/Qi/ventana_80_25/index.html',
+          'url': 'https://pizarro0823.github.io/Qi/ventanas/ventana_80_25/index.html',
           'title': 'Ventanas 80-25',
         },
         {
-          'url': 'https://pizarro0823.github.io/Qi/ventana_monumental/index.html',
+          'url': 'https://pizarro0823.github.io/Qi/ventanas/ventana_monumental/index.html',
           'title': 'Ventanas Monumental',
         },
         {
-          'url': 'https://pizarro0823.github.io/Qi/DivicionesBaño/index.html',
+          'url': 'https://pizarro0823.github.io/Qi/DivicionesBaño/Acrilico/index.html',
           'title': 'Divivion de Baño (Nave)',
         }
 ]   
