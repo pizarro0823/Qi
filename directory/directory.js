@@ -8,12 +8,6 @@
           'url': 'https://pizarro0823.github.io/Qi/ventana_80_25/index.html',
           'title': 'Ventanas 80-25',
         },
-        ,
-        {
-          'url': 'https://pizarro0823.github.io/Qi/ventana_50-20/index.html',
-          'title': 'Ventanas 50-20',
-        }
-        ,
         {
           'url': 'https://pizarro0823.github.io/Qi/ventana_monumental/index.html',
           'title': 'Ventanas Monumental',

@@ -10,27 +10,6 @@ const clor_alum = document.querySelector('#id_color_alu')
 var ionCard;
 
 
-
-
-
-
-const createNewProduc = (base, altura ,col , precio_costo,precio_venta) => {
-
-  ionCard = document.createElement('ion-card');
-  const ionCardContenc = document.createElement('ion-card-content');
-  ionCardContenc.textContent = 'Base: '+base + ' x ' +'Altura: '+ altura  
-                              + ' Color: '+col+ '=>  $ '+ precio_costo +'<--->' + precio_venta;
-  ionCard.appendChild(ionCardContenc);  
-  list.appendChild(ionCard);
-
-  
-
-};
-
-
-
-
-
 const presentAlert = () => {
   const alert = document.createElement("ion-alert");
   alert.header = "Invalid Data";
@@ -48,17 +27,17 @@ const isEmpty = str => !str.trim().length;
 
 
 btn_calcular.addEventListener('click', () => {
-  
+
   const db = list_inventary
 
 
-  const n = 2; 
+  const n = 2;
   const metro = 6;
-  const ba = base.value.replace(",",".");
-  const al = altura.value.replace(",",".");
+  const ba = base.value.replace(",", ".");
+  const al = altura.value.replace(",", ".");
   const naves = comboBox.value;
   const vidrios = comboBox_vidrio.value;
-  const color_alumnio_=clor_alum.value;
+  const color_alumnio_ = clor_alum.value;
 
 
   //precio por metrs
@@ -67,34 +46,38 @@ btn_calcular.addEventListener('click', () => {
   const mtr_jamba_744 = db[0][color_alumnio_][2] / metro * al * n;
   const traslapes_744 = db[0][color_alumnio_][3] / metro * al * naves;
   const enganche_744 = db[0][color_alumnio_][4] / metro * al * naves;
-  const socalo_inferior_744 = db[0][color_alumnio_][5] / metro * al * naves;
-  const socalo_superior_744 = db[0][color_alumnio_][6] / metro * al * naves;
-  const mtr2_vidrio =ba * al * db[0]['Glass'][vidrios] * naves ;
+  const socalo_inferior_744 = db[0][color_alumnio_][5] / metro * ba * naves;
+  const socalo_superior_744 = db[0][color_alumnio_][6] / metro * ba * naves;
+  const mtr2_vidrio = ba * al * db[0]['Glass'][vidrios] * naves;
   const Guias_7 = db[0]['Accesorios'][0] * naves * 4;
-  const Empaque_7 = db[0]['Accesorios'][3] * ba *  al * n;
+  const Empaque_7 = db[0]['Accesorios'][3] * ba * al * n;
   const Rodamientos_7 = db[0]['Accesorios'][4] * naves;
-  
-
-
-  
 
 
 
-//suma de precios por metrs
-const suma_valores_costo = Math.floor( mtr_cabezal_744+mtr_sillar_744+mtr_jamba_744+traslapes_744
-                                       +enganche_744+socalo_inferior_744+socalo_superior_744 
-                                       +mtr2_vidrio +Guias_7+Empaque_7+Rodamientos_7 ).toFixed(0) ;
 
-const precio_venta = Math.floor(suma_valores_costo * 1.60);
 
-  if (isEmpty(ba) || isEmpty(al) || isEmpty(naves) ||isEmpty(vidrios)) {
+
+
+  //suma de precios por metrs
+  const suma_valores_costo = Math.floor(mtr_cabezal_744 + mtr_sillar_744 + mtr_jamba_744 + traslapes_744
+    + enganche_744 + socalo_inferior_744 + socalo_superior_744
+    + mtr2_vidrio + Guias_7 + Empaque_7 + Rodamientos_7).toFixed(0);
+
+  const precio_venta = Math.floor(suma_valores_costo * 1.60);
+
+  if (isEmpty(ba) || isEmpty(al) || isEmpty(naves) || isEmpty(vidrios)) {
     presentAlert();
     return;
   }
 
- 
-  createNewProduc(ba,al,color_alumnio_, suma_valores_costo,precio_venta)
   
+
+  createNewProduc(ba, al, color_alumnio_, suma_valores_costo, precio_venta)
+  
+
+  
+
 })
 
 
@@ -103,6 +86,6 @@ btn_limpiar.addEventListener("click", () => {
   altura.value = "";
   comboBox.value = "";
 
-  
+
 });
 

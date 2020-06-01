@@ -12,25 +12,6 @@ var ionCard;
 
 
 
-
-
-const createNewProduc = (base, altura ,col , precio_costo,precio_venta) => {
-
-  ionCard = document.createElement('ion-card');
-  const ionCardContenc = document.createElement('ion-card-content');
-  ionCardContenc.textContent = 'Base: '+base + ' x ' +'Altura: '+ altura  
-                              + ' Color: '+col+ '=>  $ '+ precio_costo +'<--->' + precio_venta;
-  ionCard.appendChild(ionCardContenc);  
-  list.appendChild(ionCard);
-
-  
-
-};
-
-
-
-
-
 const presentAlert = () => {
   const alert = document.createElement("ion-alert");
   alert.header = "Invalid Data";
@@ -67,22 +48,13 @@ btn_calcular.addEventListener('click', () => {
   const mtr_jamba_744 = db[0][color_alumnio_][17]  / metro * al * n;
   const traslapes_744 = db[0][color_alumnio_][18] / metro * al * naves;
   const enganche_744 = db[0][color_alumnio_][19] / metro * al * naves;
-  const socalo_inferior_744 = db[0][color_alumnio_][20] / metro * al * naves;
-  const socalo_superior_744 = db[0][color_alumnio_][21] / metro * al * naves;
+  const socalo_inferior_744 = db[0][color_alumnio_][20] / metro * ba * naves;
+  const socalo_superior_744 = db[0][color_alumnio_][21] / metro * ba * naves;
   const mtr2_vidrio =ba * al * db[0]['Glass'][vidrios]  ;
   const Guias_7 = db[0]['Accesorios'][7] * naves * 4;
   const Empaque_7 = db[0]['Accesorios'][10] * ba *  al * n;
   const Rodamientos_7 = db[0]['Accesorios'][11] * naves;
-  
-console.log('ca'+mtr_cabezal_744);
-console.log('si'+mtr_sillar_744);
-console.log('ja'+mtr_jamba_744);
-console.log('en'+enganche_744);
-console.log('tra'+traslapes_744);
-console.log('sosu'+socalo_superior_744);
-console.log('soin'+socalo_inferior_744);
-console.log('vid'+mtr2_vidrio);
-console.log('ro'+Rodamientos_7);
+
 
 
 
