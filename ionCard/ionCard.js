@@ -1,6 +1,10 @@
 
 const createNewProduc = (base, altura, col, precio_costo, precio_venta) => {
 
+
+  let color =  "success";
+
+
     const ionCard = document.createElement('ion-card');
     const ionCardContenc = document.createElement('ion-card-content');
     const ionItem = document.createElement('ion-item');
@@ -10,9 +14,9 @@ const createNewProduc = (base, altura, col, precio_costo, precio_venta) => {
   
   
     ionButtonClose.slot = "end";
-    ionButtonClose.color = "tertiary";
+    ionButtonClose.color = color;
   
-    ionItem.color = "tertiary";
+    ionItem.color = color;
   
   
     ionIconClose.name = "close-circle-outline";
