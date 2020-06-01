@@ -15,6 +15,10 @@
         {
           'url': 'https://pizarro0823.github.io/Qi/DivicionesBaño/Acrilico/index.html',
           'title': 'Divivion de Baño (Nave)',
+        },
+        {
+          'url': 'https://pizarro0823.github.io/Qi/Puertas/puerta_t-244/index.html',
+          'title': 'Puertas',
         }
 ]   
 
