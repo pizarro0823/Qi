@@ -17,23 +17,6 @@ let precio_venta
 
 
 
-
-
-
-const createNewProduc = (base, altura, col,tipo, precio_costo, precio_venta) => {
-
-  const ionCard = document.createElement('ion-card');
-  const ionCardContenc = document.createElement('ion-card-content');
-  ionCardContenc.textContent = 'Base: ' + base + ' x ' + 'Altura: ' + altura
-    + ' Color: ' + col +'Tipo:'+ tipo + '=>  $ ' + precio_costo + '<--->' + precio_venta;
-  ionCard.appendChild(ionCardContenc);
-  list.appendChild(ionCard);
-};
-
-
-
-
-
 const presentAlert = () => {
   const alert = document.createElement("ion-alert");
   alert.header = "Invalid Data";
@@ -114,7 +97,7 @@ if (naves == 4)
 }
    
  
-  createNewProduc(ba, al, color_alumnio_,tiponave, suma_valores_costo, precio_venta)
+  createNewProduc(ba, al, color_alumnio_, suma_valores_costo, precio_venta)
 
   
 
