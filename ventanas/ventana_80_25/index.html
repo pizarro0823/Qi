@@ -4,9 +4,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>80-25</title>
     
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@ionic/core/css/ionic.bundle.css" />
+
+    <script type="module">
+        import { alertController } from 'https://cdn.jsdelivr.net/npm/@ionic/core@next/dist/ionic/index.esm.js';
+        window.alertController = alertController;
+      </script>
 </head>
 
 <body>
@@ -71,7 +76,9 @@
                             </ion-item>
                             
                             <ion-button class="ion-margin-vertical" id="id_btn_calcular"> 
-                                <ion-icon name="calculator-outline" slot="start"></ion-icon> Calcular</ion-button>
+                                <ion-icon name="calculator-outline" slot="start"></ion-icon> Calcular
+                                
+                            </ion-button>
 
                             <ion-button class="ion-margin-vertical" color="danger" id="id_btn_limpiar"> 
                                 <ion-icon name="trash" slot="start" ></ion-icon> Limpiar
@@ -96,8 +103,8 @@
     <script nomodule src="https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/ionic.js"></script>
     <!-- LOGIC -->
     <script src="80-25.js"></script>
-    <script src="../Inv/inv.js"></script>
-    <script src="../ionCard/ionCard.js"></script>
+    <script src="../../Inv/inv.js"></script>
+    <script src="../../ionCard/ionCard.js"></script>
 </body>
 
 </html>

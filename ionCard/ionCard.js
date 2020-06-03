@@ -1,8 +1,9 @@
 
-const createNewProduc = (base, altura, col, precio_costo, precio_venta) => {
+
+const crea = (base, altura, col, precio_costo, precio_venta) => {
 
 
-  let color =  "success";
+   let color =  "primary";
 
 
     const ionCard = document.createElement('ion-card');
@@ -10,6 +11,8 @@ const createNewProduc = (base, altura, col, precio_costo, precio_venta) => {
     const ionItem = document.createElement('ion-item');
     const ionIconClose = document.createElement('ion-icon');
     const ionButtonClose = document.createElement('ion-button');
+   
+
   
   
   
@@ -25,7 +28,7 @@ const createNewProduc = (base, altura, col, precio_costo, precio_venta) => {
   
   
     ionCardContenc.textContent = 'Base: ' + base + ' x ' + 'Altura: ' + altura
-      + ' Color: ' + col + '=>  $ ' + precio_costo + '<--->' + precio_venta;
+    + '...' +'$'+ precio_costo + '<--->' +'$'+ precio_venta;
   
   
   
@@ -43,8 +46,36 @@ const createNewProduc = (base, altura, col, precio_costo, precio_venta) => {
   
       ionCard.remove();
   
-    })
+    }) 
   
   
   };
   
+
+
+async function createNewProduc(base, altura, col, precio_costo, precio_venta) {
+
+  var agregar = "Agregar";
+
+  const alert = await alertController.create({
+
+    header: 'Precio Venta $  ' + precio_venta,
+
+    message: 'Costo  $' + precio_costo,
+
+    buttons: [
+      {
+        text: 'Olvidar'
+      },
+      {
+        text: agregar, 
+        handler: ()=>{
+           crea(base, altura, col, precio_costo, precio_venta)
+        } 
+      }],
+
+
+  });
+
+  await alert.present();
+}

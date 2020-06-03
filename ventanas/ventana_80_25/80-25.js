@@ -33,6 +33,8 @@ btn_calcular.addEventListener('click', () => {
   const db = list_inventary
 
 
+  
+
   const n = 2; 
   const metro = 6;
   const ba = base.value.replace(",",".");
