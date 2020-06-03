@@ -55,7 +55,7 @@ const crea = (base, altura, col, precio_costo, precio_venta) => {
 
 async function createNewProduc(base, altura, col, precio_costo, precio_venta) {
 
-  var agregar = "Agregar";
+  
 
   const alert = await alertController.create({
 
@@ -68,7 +68,7 @@ async function createNewProduc(base, altura, col, precio_costo, precio_venta) {
         text: 'Olvidar'
       },
       {
-        text: agregar, 
+        text: 'agregar', 
         handler: ()=>{
            crea(base, altura, col, precio_costo, precio_venta)
         } 
